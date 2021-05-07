@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+	<script src="./scripts/index.js"></script>
+	<link rel="stylesheet" href="./stylesheets/index.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<h1>Ping-Pong Leaderboard</h1>
+	
+	<p> To start a game, two users must login or register, and you must select who will serve. </p>
+	
+	<span>Login / Register User 1: </span>
+	
+	<input type="text" id="userOne">
+	<button onclick={loginUserOne()}>Login</button>
+	<button onclick={registerUserOne()}>Register</button>
+	
+	<br />
+	
+	<span>Login / Register User 2: </span>
+	
+	<input type="text" id="userTwo">
+	<button onclick={loginUserTwo()}>Login</button>
+	<button onclick={registerUserTwo()}>Register</button>
+	
+	<br />
+	
+	<span>Which user will serve first? </span>
+	<input type="radio" name="server" id="radio-one">
+	<span id="userOneRadio"></span>
+	<input type="radio" name="server" id="radio-two">
+	<span id="userTwoRadio"></span>
+	
+	<br />
+	<button onclick={startGame()}> Start Game</button>
+	
+	<div class="game-div" id="game-div">
+	
+		<span id="userOneServer"></span>
+		<h1 id="userOnePoints"></h1>
+		<h5 id="userOneName"></h5>
+		<button onclick={incrementUserOnePoints()}>Increment User One Points</button>
+		
+		<br />
+		
+		<span id="userTwoServer"></span>
+		<h1 id="userTwoPoints"></h1>
+		<h5 id="userTwoName"></h5>
+		<button onclick={incrementUserTwoPoints()}>Increment User Two Points</button>
+		
+		<button onclick={terminateGame()}>Terminate Game</button>
+		
+	</div>
+	
+	<div class="leaderboard-div" id="leaderboard-div">
+		<button onclick={grabUserLeaderboard()}> Grab User Leaderboard</button>
+		
+	
+	</div>
+	
+	
+
+</body>
+</html>
